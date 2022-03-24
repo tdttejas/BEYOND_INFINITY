@@ -20,11 +20,18 @@ app.use(methodOverride("_method"));
 
 
 app.get("/",async (req,res) => {
-    const college = await NewCollege.find({});
     console.log(college);
-    res.render("homePage",{ college });
+    res.render("homePage");
 })
 
+app.get("/:college_name",async(req,res)=>{
+    const college = await NewCollege.find({});
+    res.render("college",{ college });
+
+})
+app.get("*",async(req,res=>{
+    res.send("No such Page Exists!!")
+}))
 app.listen(3000,(req,res) => {
     console.log("3000 active");
 })
