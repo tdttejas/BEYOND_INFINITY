@@ -25,6 +25,14 @@ app.get("/",async (req,res) => {
     res.render("homePage", { newCollege } );
 })
 
+app.get("/:college_name",async(req,res)=>{
+    const college = await NewCollege.find({});
+    res.render("college",{ college });
+
+})
+app.get("*",async(req,res=>{
+    res.send("No such Page Exists!!")
+}))
 app.listen(3000,(req,res) => {
     console.log("3000 active");
 })

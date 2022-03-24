@@ -6,12 +6,20 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "utkarsh",
   "license": "ISC",
   "dependencies": {
     "ejs": "^3.1.6",
     "express": "^4.17.3",
     "method-override": "^3.0.0",
     "mongoose": "^6.2.8"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tdttejas/BEYOND_INFINITY.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tdttejas/BEYOND_INFINITY/issues"
+  },
+  "homepage": "https://github.com/tdttejas/BEYOND_INFINITY#readme"
 }
