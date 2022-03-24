@@ -30,6 +30,6 @@ const collegeSchema = new mongoose.Schema({
    }
 })
 
-const NewCollege = new mongoose.model("NewCollege",collegeSchema);
+const College = new mongoose.model("College",collegeSchema);
 
-module.exports = NewCollege;
+module.exports = College;

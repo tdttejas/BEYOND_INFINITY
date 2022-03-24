@@ -3,9 +3,9 @@ const app = express();
 const path = require("path");
 const mongoose = require("mongoose");
 const methodOverride = require("method-override");
-const NewCollege = require("./models/college");
+const College = require("./models/college");
 
-mongoose.connect("mongodb://localhost:27017/colleges")
+mongoose.connect("mongodb://localhost:27017/college")
 .then(() => {
     console.log("Connected to database succcessfully");
 })
@@ -20,9 +20,9 @@ app.use(methodOverride("_method"));
 
 
 app.get("/",async (req,res) => {
-    const college = await NewCollege.find({});
-    console.log(college);
-    res.render("homePage",{ college });
+    const newCollege   = await College.find({});
+    console.log(newCollege);
+    res.render("homePage", { newCollege } );
 })
 
 app.listen(3000,(req,res) => {
