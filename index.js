@@ -20,19 +20,21 @@ app.use(methodOverride("_method"));
 
 
 app.get("/",async (req,res) => {
-    const newCollege   = await College.find({});
-    console.log(newCollege);
-    res.render("homePage", { newCollege } );
+    const allColleges   = await College.find({});
+    console.log(allColleges);
+    res.render("homePage", { allColleges } );
 })
 
 app.get("/:college_name",async(req,res)=>{
-    const college = await NewCollege.find({});
+    const { college_name } = req.params;
+    const college = College.find({ name: `${college_name}` });
+    console.log(college);
     res.render("college",{ college });
 
 })
-app.get("*",async(req,res=>{
-    res.send("No such Page Exists!!")
-}))
+// app.get("*",async(req,res=>{
+//     res.send("No such Page Exists!!")
+// }))
 app.listen(3000,(req,res) => {
     console.log("3000 active");
 })

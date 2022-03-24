@@ -16,15 +16,13 @@ const collegeSchema = new mongoose.Schema({
     address:{
         type:String
     },
-    courses:{
-        type:[
+    courses:[
             {
                 courseName: String,
                 level:String,  //UG or PG or Diploma
                 intake:Number
             }
-        ]
-    },
+        ],
    url:{
        type:String
    }
