@@ -31,6 +31,10 @@ app.get("/",async (req,res) => {
     res.render("index", { allColleges } );
 })
 
+app.get("/geotag",(req,res) => {
+    res.redirect("https://harsh-7578.github.io/GISProject2/");
+})
+
 app.get("/:college_name",async(req,res)=>{
     const { college_name } = req.params;
     console.log(college_name);
