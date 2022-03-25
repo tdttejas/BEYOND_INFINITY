@@ -38,10 +38,10 @@
                     title="Take A Virtual Tour!" src="img/backgroundforcollege.jpg" width="100%"></a>
         </div>
         <div class="dataofCollege " id="arrange">
-            <h2>Veermata Jijabai Technological Institute,Matunga Mumbai Maharashtra</h2>
-            <h3>Established in :- 1887</h3>
-            <h3>Affliation : Mumbai University</h3>
-            <h3>Address :- H R Mahajani Rd, Matunga, Mumbai, Maharashtra 400019</h3>
+            <h2><%= college.name %> </h2>
+            <h3>Established in :- <%= college.establishment %> </h3>
+            <h3>Affliation : <%= college.universityAffiliation %> </h3>
+            <h3>Address :- <%= college.address %> </h3>
         </div>
 
     </div>
@@ -60,31 +60,14 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
-                        
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                        </tr>
+                        <% for( let i=0 ; i < college.courses.length ; i++ ) { %>
+                            <tr>
+                                <th scope="row"><%= i+1 %> </th>
+                                <td><%= college.courses[i].courseName %> </td>
+                                <td><%= college.courses[i].level %> </td>
+                                <td><%= college.courses[i].intake %> </td>
+                            </tr>
+                        <% } %>
                     </tbody>
                 </table>
             </div>
@@ -96,9 +79,12 @@
             <h2> Facilities offered are :- </h2>
 
             <div class="list-facilities">
-
                 <ul>
-                    <li>24 x 7 library </li>
+                    <% for( let facility of college.facilities ) { %>
+                        <li><%= facility %>  </li>
+                    <% } %>
+                    
+                    <!-- <li>24 x 7 library</li>
                     <li>24 x 7 library</li>
                     <li>24 x 7 library</li>
                     <li>24 x 7 library</li>
@@ -107,8 +93,7 @@
                     <li>24 x 7 library</li>
                     <li>24 x 7 library</li>
                     <li>24 x 7 library</li>
-                    <li>24 x 7 library</li>
-                    <li>24 x 7 library</li>
+                    <li>24 x 7 library</li> -->
 
                 </ul>
             </div>

@@ -36,7 +36,7 @@ app.get("/:college_name",async(req,res)=>{
     console.log(college_name);
     const college = await College.findOne({ name: college_name });
     console.log(college);
-    res.render("college",{ college });
+    res.render("tourpage",{ college });
 
 })
 
