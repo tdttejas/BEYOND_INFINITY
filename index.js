@@ -41,7 +41,7 @@ app.get("/:college_name",async(req,res)=>{
 })
 
 app.get("*",(req,res)=>{
-    res.render("error")
+    res.render("e")
 })
 
 app.listen(3000,(req,res) => {
