@@ -30,7 +30,9 @@ app.get("/",async (req,res) => {
     console.log(allColleges);
     res.render("index", { allColleges } );
 })
-
+app.get("/geotag",(req,res)=>{
+    res.redirect("https://harsh-7578.github.io/Final_SIH/")
+})
 app.get("/:college_name",async(req,res,next)=>{
     try{
     const { college_name } = req.params;
@@ -58,4 +60,3 @@ app.use((err, req, res, next) => {
 app.listen(3000,(req,res) => {
     console.log("3000 active");
 })
-
