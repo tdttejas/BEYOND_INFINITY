@@ -5,7 +5,12 @@ const mongoose = require("mongoose");
 const methodOverride = require("method-override");
 const College = require("./models/college");
 
-mongoose.connect("mongodb://localhost:27017/college")
+const dotenv= require("dotenv")
+dotenv.config();
+
+const dbUrl=process.env.DB_URL;
+//"mongodb://localhost:27017/college"
+mongoose.connect(dbUrl)
 .then(() => {
     console.log("Connected to database succcessfully");
 })
@@ -18,6 +23,7 @@ app.set("view engine","ejs");
 app.use(express.urlencoded({extended:true}));
 app.use(methodOverride("_method"));
 
+app.use(express.static(path.join(__dirname,"/public")));
 
 app.get("/",async (req,res) => {
     const allColleges   = await College.find({});
@@ -27,7 +33,8 @@ app.get("/",async (req,res) => {
 
 app.get("/:college_name",async(req,res)=>{
     const { college_name } = req.params;
-    const college = College.find({ name: `${college_name}` });
+    console.log(college_name);
+    const college = await College.findOne({ name: college_name });
     console.log(college);
     res.render("college",{ college });
 
