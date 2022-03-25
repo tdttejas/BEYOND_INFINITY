@@ -3,7 +3,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Itranary</title>
+		<title>Intranary</title>
 
 		<link
 			rel="stylesheet"
@@ -29,9 +29,9 @@
 
 	<body>
 		<nav class="nav nav_top">
-			<a class="logo" href="#"><img src="img/logo.png" height="100px" /></a>
+			<a class="logo" href="#"><img src="img/New_Logo.jpeg" height="100px" /></a>
 			<div class="nav_side">
-				<a href="geotag">Map</a>
+				<a href="geotag" target="_blank">Map</a>
 				<a href="#searchColleges">Search For Colleges</a>
 				<a href="#Contact">Contact Us</a>
 			</div>
@@ -40,24 +40,22 @@
 		<div class="main">
 			<div class="image"></div>
 			<div class="main_content">
-				<h2>Education is a gift that no one can take away.</h2>
-				<br />
-				<span
-					>Industry. Lorem Ipsum has been the industry's standard dummy text
-					ever since the 1500s, when an unknown printer took a galley of type
-					and scrambled it to make a type specimen book. It has survived not
-					only five centuries, but also the leap into electronic typesetting,
-					remaining essentially unchanged. It was popularised in the 1960s with
-					the release of Letraset sheets containing Lorem Ipsum passages, and
-					more recently with desktop publishing software like Aldus PageMaker
-					including versions of Lorem Ipsum
+				<h2>Education is a gift that no one can take away.</h2><br>
+				<span>Education is a process of learning through which we acquire knowledge. It enlightens, empowers, and creates a positive development. Education gives an individual the knowledge and skills to work with virtue. It aids the all-round mental, physical, and intellectual growth and development of an individual.
+
+					There are three distinct types of Education- Formal Education, Non-Formal Education, and Informal Education. Education aims to change the way of one’s thinking. Academic knowledge provides one leaning on a global scale, while Practical knowledge is acquired for life on the whole.
+					
+					Education is imparted to all, at various research and academic institutions, imparted by teachers, professors, and trainers.These institutions conduct various curricular activities that aid the overall growth and development of students.
 				</span>
 				<!-- <div class="btn" onclick="hidebutton(this)">
-                <a href="service.html">Buy Now</a>
-            </div> -->
+					<a href="service.html">Buy Now</a>
+				</div> -->
+	
+	
 			</div>
+	
 		</div>
-		<div class="mainselect">
+		<div class="mainselect" id="searchColleges">
 			<div class="select-box">
 				<div class="options-container">
 					<% for(let college of allColleges){%>
@@ -363,34 +361,38 @@
 		<br />
 		<footer id="Contact">
 			<div class="logo">
-				<a class="logo" href="#"><img src="img/logo.png" height="80px" /></a>
+				<a class="logo" href="#"><img src="img/logo.png" height="80px"></a>
 			</div>
-			<div class="social">
-				<h3>Follow Us</h3>
-				<a href="https://www.facebook.com/zuck" target="_blank"
-					><i class="fa fa-facebook" aria-hidden="true"></i
-				></a>
-				<a href="https://www.linkedin.com/company/spacex/" target="_blank"
-					><i class="fa fa-linkedin-square" aria-hidden="true"></i
-				></a>
-				<a href="https://twitter.com/jeffbezos?lang=en" target="_blank"
-					><i class="fa fa-twitter-square" aria-hidden="true"></i
-				></a>
+			<div class="mainfooter">
+				<div class="social">
+					<h2>Team Members</h2>
+	
+					<div class="namesmain">
+						<div class="threenames">
+							<h3>Tejas Thorat</h3>
+							<h3>Sachit Sankhe</h3>
+							<h3>Utkarsh Chedda</h3>
+						</div>
+						<div class="threenames">
+							<h3>Harsh Singh</h3>
+							<h3>Shubham Mahakal</h3>
+							<h3>Shreya Lanjewar</h3>
+						</div>
+					</div>
+				</div>
+				<hr>
+	
+				<div class="githubrepo">
+					<h3>Our GitHub Repo</h3>
+					<a href="https://github.com/tdttejas/BEYOND_INFINITY" target="_blank"><i class="fa fa-github" style="font-size:36px"></i></a>
+				</div>
 			</div>
-			<div class="contact">
-				<h3>Contact Us</h3>
-				<a href="https://www.instagram.com/elonmusk/?hl=en" target="_blank"
-					><i class="fa fa-instagram" aria-hidden="true"></i
-				></a>
-				<a href="#91 9999999999" target="_blank"
-					><i class="fa fa-phone-square" aria-hidden="true"></i
-				></a>
-				<a href="reply@amazon.com" target="_blank"
-					><i class="fa fa-envelope" aria-hidden="true"></i
-				></a>
-			</div>
-			<hr />
+	
+			<hr>
 			<p>Copyright &copy; 2022 BEYOND_INFINITY. All rights reserved</p>
+	
+	
+	
 		</footer>
 		<script src="main.js"></script>
 	</body>
