@@ -75,7 +75,7 @@ html
     text-align: center;
     font-size: 18px;
     color: white;
-    font-weight: lighter;
+    font-weight: bold;
   }
   .main_content h2 {
     text-align: center;
@@ -482,7 +482,7 @@ html
     font-size: 16px;
     position: relative;
     border-radius: 8px 8px 0 0;
-    z-index: 100;
+    z-index: 8;
     border: 8px solid #2f3640;
     opacity: 0;
     pointer-events: none;
@@ -503,4 +503,13 @@ html
     align-items: center;
     justify-content: center;
     text-align: center;
+  }
+  .college-href{
+    text-decoration: none;
+    color: #fff;
+  }
+  .college-href:hover{
+    text-decoration: none;
+    color: #fff;
+    text-decoration: underline;
   }

@@ -8,9 +8,12 @@
 </head>
 <body>
     <h1><%= college.name %> </h1>
-    <% console.log(college) %> 
     <h2>This is the second page</h2>
     <img src="<%= college.url %>" alt="">
+    <b><ul>Courses</ul></b>
+    <% for(courses of college.courses){ %>
+        <li><%=courses.courseName %></li>
+    <% } %> 
     
 </body>
 </html>

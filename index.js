@@ -23,12 +23,12 @@ app.set("view engine","ejs");
 app.use(express.urlencoded({extended:true}));
 app.use(methodOverride("_method"));
 
-app.use(express.static(path.join(__dirname,"/public")));
+app.use(express.static(path.join(__dirname,"public")));
 
 app.get("/",async (req,res) => {
     const allColleges   = await College.find({});
     console.log(allColleges);
-    res.render("homePage", { allColleges } );
+    res.render("index", { allColleges } );
 })
 
 app.get("/:college_name",async(req,res)=>{
@@ -39,9 +39,11 @@ app.get("/:college_name",async(req,res)=>{
     res.render("college",{ college });
 
 })
-// app.get("*",async(req,res=>{
-//     res.send("No such Page Exists!!")
-// }))
+
+app.get("*",(req,res)=>{
+    res.render("error")
+})
+
 app.listen(3000,(req,res) => {
     console.log("3000 active");
 })
