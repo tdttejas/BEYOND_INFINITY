@@ -1,7 +1,7 @@
 {
   "name": "sih_hackathon_2022",
   "version": "1.0.0",
-  "description": "",
+  "description": "* [Tejas Thorat](https://github.com/tdttejas) - tdttejas@gmail.com\r * [Utkarsh Chheda](https://github.com/utkchheda27) - utkchheda27@gmail.com\r * [Harsh Singh](https://github.com/harsh-7578) - harshsingh7578@gmail.com\r * [Sachit Sankhe](https://github.com/SachitSankhe) - sachitsankhe@gmail.com\r * [Shubham Mahakal](https://github.com/samahakal) - samahakal_b20@it.vjti.ac.in\r * [Shreya Lanjewar](https://github.com/utkchheda27) - shreyadilip123@gmail.com",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -22,5 +22,6 @@
   "bugs": {
     "url": "https://github.com/tdttejas/BEYOND_INFINITY/issues"
   },
-  "homepage": "https://github.com/tdttejas/BEYOND_INFINITY#readme"
+  "homepage": "https://github.com/tdttejas/BEYOND_INFINITY#readme",
+  "devDependencies": {}
 }
